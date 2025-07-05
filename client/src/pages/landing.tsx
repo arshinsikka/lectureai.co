@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/hero-section";
+import { ProblemVisionSection } from "@/components/problem-vision-section";
 import { FeaturesSection } from "@/components/features-section";
 import { VisionSection } from "@/components/vision-section";
 import { TeamSection } from "@/components/team-section";
@@ -65,6 +66,7 @@ export default function Landing() {
       
       <main className="pt-16">
         <HeroSection onWaitlistClick={() => setIsWaitlistOpen(true)} />
+        <ProblemVisionSection />
         <FeaturesSection />
         <VisionSection />
         <TeamSection />
