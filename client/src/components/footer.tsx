@@ -1,4 +1,5 @@
 import { Brain } from "lucide-react";
+import logoPath from "@assets/logo2_1751698968171.png";
 
 export function Footer() {
   const footerLinks = {
@@ -28,13 +29,15 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-blue-800 rounded-lg flex items-center justify-center">
-                <Brain className="h-4 w-4 text-white" />
-              </div>
+              <img 
+                src={logoPath} 
+                alt="LectureAI Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <span className="text-lg font-bold">LectureAI</span>
             </div>
             <p className="text-gray-400">
-              Transforming education through AI-powered note-taking and learning solutions.
+              LectureAI is an AI-powered platform built by NUS students to make lecture revision smarter and faster — proudly backed by BLOCK71 Singapore.
             </p>
           </div>
           
