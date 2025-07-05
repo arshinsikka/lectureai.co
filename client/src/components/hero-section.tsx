@@ -65,30 +65,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
             
 
             
-            {/* Feature Cards */}
-            <div className="absolute top-4 -left-8 bg-white rounded-lg shadow-lg p-4 hidden lg:block">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">🌐</span>
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-gray-900">Bilingual Support</div>
-                  <div className="text-xs text-gray-600">Multi-language notes</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute bottom-4 -right-8 bg-white rounded-lg shadow-lg p-4 hidden lg:block">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✨</span>
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-gray-900">AI Powered</div>
-                  <div className="text-xs text-gray-600">Smart summarization</div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
