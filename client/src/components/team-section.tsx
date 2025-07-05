@@ -53,7 +53,7 @@ export function TeamSection() {
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
               <p className={`${member.roleColor} font-medium mb-1`}>{member.role}</p>
-              <p className="text-gray-500 text-sm font-medium mb-2">{member.major}</p>
+              <p className="text-gray-500 text-sm mb-2"><span className="font-bold">{member.major} @ NUS</span></p>
               <p className="text-gray-600 text-sm">{member.description}</p>
             </div>
           ))}
