@@ -1,5 +1,5 @@
 import { Brain } from "lucide-react";
-import logoPath from "@assets/logo2_1751698968171.png";
+import logoPath from "@assets/image_1751701141612.png";
 
 export function Footer() {
   const footerLinks = {
