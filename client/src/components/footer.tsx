@@ -3,19 +3,13 @@ import { Brain } from "lucide-react";
 export function Footer() {
   const footerLinks = {
     product: [
-      { name: "Features", href: "#features" },
-      { name: "Pricing", href: "#" },
-      { name: "API", href: "#" },
-      { name: "Integrations", href: "#" }
+      { name: "Features", href: "#features" }
     ],
     company: [
       { name: "About", href: "#" },
-      { name: "Team", href: "#team" },
-      { name: "Careers", href: "#" },
-      { name: "News", href: "#" }
+      { name: "Team", href: "#team" }
     ],
     support: [
-      { name: "Help Center", href: "#" },
       { name: "Contact", href: "#contact" },
       { name: "Privacy", href: "#" },
       { name: "Terms", href: "#" }
