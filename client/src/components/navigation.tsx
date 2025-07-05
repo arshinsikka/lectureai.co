@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoPath from "@assets/logo2_1751698968171.png";
+import logoPath from "@assets/C18BB098-A3BD-4889-815E-9E142058F180_1_201_a_1751699348415.jpeg";
 
 interface NavigationProps {
   onWaitlistClick: () => void;

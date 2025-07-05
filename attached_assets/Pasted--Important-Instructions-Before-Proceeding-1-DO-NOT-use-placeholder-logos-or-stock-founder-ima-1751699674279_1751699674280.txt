@@ -1,0 +1,64 @@
+📌 Important Instructions Before Proceeding:
+
+1. **DO NOT use placeholder logos or stock founder images.**
+   I have uploaded actual images and will provide details when asked. Please use the ones I’ve shared.
+
+2. **DO NOT invent team bios or job titles.** I’ve provided names, roles, and one-line descriptions below.
+
+3. In the **“Get in Touch”** section, only use this email:  
+   📧 teamlectureai@gmail.com  
+   Do not include multiple contact categories (e.g., partnerships@, investors@). Use only this one address.
+
+---
+
+👤 Team Section Updates:
+
+Please add a section called **“Meet the Team”** with the following profiles and roles:
+
+1. **Vidushi Jaidka**  
+   - 📸 Use the second image I uploaded.  
+   - 🧠 Role: Data & Summarization Lead  
+   - 📝 Bio: Specializes in information extraction and NLP-powered summarization pipelines, with a focus on education data.
+
+2. **Ishan Agarwal**  
+   - 📸 Use the third image.  
+   - ⚙️ Role: Backend & Infrastructure Lead  
+   - 📝 Bio: Experienced in building robust backend systems for high-volume processing, cloud storage, and DevOps.
+
+3. **Arshin Sikka**  
+   - 📸 Use the fourth image.  
+   - 🤖 Role: AI & Systems Lead  
+   - 📝 Bio: Leads the development of AI-driven academic transcription workflows, combining NLP, Zoom API integrations, and cloud orchestration.
+
+Ensure the layout is responsive and readable (e.g., cards or stacked rows with images and names on mobile view).
+
+---
+
+🧠 Why Choose LectureAI Section – Fix These Features:
+
+Keep these existing items:
+- ✅ Audio-to-Text Transcription
+- ✅ AI Summarization
+- ✅ Bilingual Support
+
+But remove the following (they are not part of our actual system):
+- ❌ Smart Search
+- ❌ Progress Tracking
+- ❌ Real-Time Sync
+
+Replace them with the following three critical features:
+
+1. **Topic-Wise Segmentation**  
+   AI automatically breaks down long lectures into logically grouped topics for faster review.
+
+2. **Deadline & Task Extraction**  
+   Uses NLP to detect professor instructions like assignments, due dates, and announcements.
+
+3. **Formatted Revision-Ready Notes**  
+   The final document is auto-structured with summaries, formulas, Mandarin toggle, and downloadable as DOCX or PDF.
+
+Please make sure these 6 features are now correctly reflected in the “Why Choose LectureAI” section.
+
+---
+
+Finally: If at any point you need additional assets, ask me directly instead of assuming or using stock content.

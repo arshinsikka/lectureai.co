@@ -58,19 +58,7 @@ export function ContactSection() {
     {
       icon: <Mail className="h-6 w-6 text-white" />,
       title: "Email",
-      description: "hello@lectureai.com",
-      bgColor: "bg-orange-500"
-    },
-    {
-      icon: <Users className="h-6 w-6 text-white" />,
-      title: "Partnerships",
-      description: "partners@lectureai.com",
-      bgColor: "bg-blue-800"
-    },
-    {
-      icon: <TrendingUp className="h-6 w-6 text-white" />,
-      title: "Investors",
-      description: "invest@lectureai.com",
+      description: "teamlectureai@gmail.com",
       bgColor: "bg-orange-500"
     }
   ];
@@ -89,17 +77,18 @@ export function ContactSection() {
         
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-6">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className={`w-12 h-12 ${info.bgColor} rounded-lg flex items-center justify-center`}>
-                  {info.icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{info.title}</h3>
-                  <p className="text-gray-600">{info.description}</p>
-                </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                <Mail className="h-6 w-6 text-white" />
               </div>
-            ))}
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                <p className="text-gray-600">teamlectureai@gmail.com</p>
+              </div>
+            </div>
+            <div className="text-gray-600">
+              <p>We'd love to hear from you! Whether you're interested in partnerships, have questions about our technology, or want to learn more about LectureAI, don't hesitate to reach out.</p>
+            </div>
           </div>
           
           <div className="bg-gray-50 rounded-2xl p-8">

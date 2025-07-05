@@ -1,4 +1,4 @@
-import { Mic, Brain, Globe, Search, RefreshCw, TrendingUp } from "lucide-react";
+import { Mic, Brain, Globe, BookOpen, Calendar, FileText } from "lucide-react";
 
 export function FeaturesSection() {
   const features = [
@@ -21,21 +21,21 @@ export function FeaturesSection() {
       bgColor: "bg-orange-500"
     },
     {
-      icon: <Search className="h-6 w-6 text-white" />,
-      title: "Smart Search",
-      description: "Find specific topics and concepts across all your notes with advanced semantic search.",
+      icon: <BookOpen className="h-6 w-6 text-white" />,
+      title: "Topic-Wise Segmentation",
+      description: "AI automatically breaks down long lectures into logically grouped topics for faster review.",
       bgColor: "bg-blue-800"
     },
     {
-      icon: <RefreshCw className="h-6 w-6 text-white" />,
-      title: "Real-time Sync",
-      description: "Access your notes across all devices with instant synchronization.",
+      icon: <Calendar className="h-6 w-6 text-white" />,
+      title: "Deadline & Task Extraction",
+      description: "Uses NLP to detect professor instructions like assignments, due dates, and announcements.",
       bgColor: "bg-orange-500"
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-white" />,
-      title: "Progress Tracking",
-      description: "Monitor your learning progress with detailed analytics and insights.",
+      icon: <FileText className="h-6 w-6 text-white" />,
+      title: "Formatted Revision-Ready Notes",
+      description: "The final document is auto-structured with summaries, formulas, Mandarin toggle, and downloadable as DOCX or PDF.",
       bgColor: "bg-blue-800"
     }
   ];

@@ -1,32 +1,29 @@
+import vidushiImage from "@assets/image_1751699357073.png";
+import ishanImage from "@assets/image_1751699362464.png";
+import arshinImage from "@assets/Arshin Sikka Linkedin Picture_1751699384805.jpg";
+
 export function TeamSection() {
   const teamMembers = [
     {
-      name: "Alex Chen",
-      role: "CEO & Co-Founder",
-      description: "Former ML Engineer at Google, Stanford CS PhD",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300",
+      name: "Vidushi Jaidka",
+      role: "Data & Summarization Lead",
+      description: "Specializes in information extraction and NLP-powered summarization pipelines, with a focus on education data.",
+      image: vidushiImage,
       roleColor: "text-orange-500"
     },
     {
-      name: "Dr. Sarah Martinez",
-      role: "CTO & Co-Founder",
-      description: "AI Research Scientist, MIT AI Lab alumni",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300",
+      name: "Ishan Agarwal",
+      role: "Backend & Infrastructure Lead",
+      description: "Experienced in building robust backend systems for high-volume processing, cloud storage, and DevOps.",
+      image: ishanImage,
       roleColor: "text-blue-800"
     },
     {
-      name: "David Kim",
-      role: "Lead Developer",
-      description: "Full-stack engineer, UC Berkeley graduate",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300",
+      name: "Arshin Sikka",
+      role: "AI & Systems Lead",
+      description: "Leads the development of AI-driven academic transcription workflows, combining NLP, Zoom API integrations, and cloud orchestration.",
+      image: arshinImage,
       roleColor: "text-orange-500"
-    },
-    {
-      name: "Emma Thompson",
-      role: "Head of Design",
-      description: "UX Designer, previously at Apple Design",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b641?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300",
-      roleColor: "text-blue-800"
     }
   ];
 
@@ -42,7 +39,7 @@ export function TeamSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center group">
               <img 
