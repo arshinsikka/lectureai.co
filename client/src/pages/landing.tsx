@@ -5,6 +5,7 @@ import { ProblemVisionSection } from "@/components/problem-vision-section";
 import { FeaturesSection } from "@/components/features-section";
 import { VisionSection } from "@/components/vision-section";
 import { TeamSection } from "@/components/team-section";
+import { MilestonesRoadmapSection } from "@/components/milestones-roadmap-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -70,6 +71,7 @@ export default function Landing() {
         <FeaturesSection />
         <VisionSection />
         <TeamSection />
+        <MilestonesRoadmapSection />
         
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-500 to-blue-800">
