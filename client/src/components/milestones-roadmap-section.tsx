@@ -81,22 +81,15 @@ export function MilestonesRoadmapSection() {
         
         {/* Desktop Timeline Layout */}
         <div className="hidden lg:block">
-          <div className="relative">
+          <div className="relative py-16">
             {/* Timeline Line */}
             <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-green-300 via-orange-300 to-blue-300 transform -translate-y-1/2"></div>
             
-            <div className="grid grid-cols-7 gap-4">
+            <div className="grid grid-cols-7 gap-6">
               {milestones.map((milestone, index) => (
-                <div key={index} className="relative">
-                  {/* Timeline Dot */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <div className={`w-12 h-12 rounded-full ${milestone.bgColor} ${milestone.borderColor} border-4 flex items-center justify-center shadow-lg`}>
-                      {milestone.icon}
-                    </div>
-                  </div>
-                  
+                <div key={index} className="relative min-h-[400px] flex flex-col justify-center">
                   {/* Content Card */}
-                  <div className={`${index % 2 === 0 ? 'mt-20' : 'mb-20'} ${milestone.bgColor} ${milestone.borderColor} border-2 rounded-2xl p-6 transition-transform hover:scale-105`}>
+                  <div className={`${index % 2 === 0 ? 'order-1 mb-8' : 'order-2 mt-8'} ${milestone.bgColor} ${milestone.borderColor} border-2 rounded-2xl p-6 transition-transform hover:scale-105`}>
                     <div className="text-center">
                       <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide block mb-2">
                         {milestone.date}
@@ -109,6 +102,13 @@ export function MilestonesRoadmapSection() {
                       <p className="text-gray-600 text-sm leading-relaxed">
                         {milestone.description}
                       </p>
+                    </div>
+                  </div>
+                  
+                  {/* Timeline Dot */}
+                  <div className={`${index % 2 === 0 ? 'order-2' : 'order-1'} flex justify-center`}>
+                    <div className={`w-12 h-12 rounded-full ${milestone.bgColor} ${milestone.borderColor} border-4 flex items-center justify-center shadow-lg z-10`}>
+                      {milestone.icon}
                     </div>
                   </div>
                 </div>
