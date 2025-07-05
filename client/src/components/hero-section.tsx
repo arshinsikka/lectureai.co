@@ -42,16 +42,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
               </Button>
             </div>
             
-            <div className="flex items-center space-x-6 pt-4">
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5 text-orange-500" />
-                <span className="text-sm text-gray-600">500+ Students on Waitlist</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <GraduationCap className="h-5 w-5 text-orange-500" />
-                <span className="text-sm text-gray-600">15+ Partner Universities</span>
-              </div>
-            </div>
+
           </div>
           
           {/* Right Visual */}
