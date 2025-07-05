@@ -1,4 +1,6 @@
 import { users, waitlistEntries, contactMessages, type User, type InsertUser, type WaitlistEntry, type InsertWaitlistEntry, type ContactMessage, type InsertContactMessage } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -12,79 +14,55 @@ export interface IStorage {
   getContactMessages(): Promise<ContactMessage[]>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private waitlistEntries: Map<number, WaitlistEntry>;
-  private contactMessages: Map<number, ContactMessage>;
-  private currentUserId: number;
-  private currentWaitlistId: number;
-  private currentContactId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.waitlistEntries = new Map();
-    this.contactMessages = new Map();
-    this.currentUserId = 1;
-    this.currentWaitlistId = 1;
-    this.currentContactId = 1;
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.currentUserId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
     return user;
   }
 
   async addToWaitlist(insertEntry: InsertWaitlistEntry): Promise<WaitlistEntry> {
     // Check if email already exists
-    const existingEntry = Array.from(this.waitlistEntries.values()).find(
-      (entry) => entry.email === insertEntry.email
-    );
+    const [existingEntry] = await db.select().from(waitlistEntries).where(eq(waitlistEntries.email, insertEntry.email));
     
     if (existingEntry) {
       throw new Error("Email already exists in waitlist");
     }
 
-    const id = this.currentWaitlistId++;
-    const entry: WaitlistEntry = {
-      id,
-      email: insertEntry.email,
-      name: insertEntry.name || null,
-      createdAt: new Date(),
-    };
-    this.waitlistEntries.set(id, entry);
+    const [entry] = await db
+      .insert(waitlistEntries)
+      .values(insertEntry)
+      .returning();
     return entry;
   }
 
   async getWaitlistEntries(): Promise<WaitlistEntry[]> {
-    return Array.from(this.waitlistEntries.values());
+    return await db.select().from(waitlistEntries);
   }
 
   async saveContactMessage(insertMessage: InsertContactMessage): Promise<ContactMessage> {
-    const id = this.currentContactId++;
-    const message: ContactMessage = {
-      ...insertMessage,
-      id,
-      createdAt: new Date(),
-    };
-    this.contactMessages.set(id, message);
+    const [message] = await db
+      .insert(contactMessages)
+      .values(insertMessage)
+      .returning();
     return message;
   }
 
   async getContactMessages(): Promise<ContactMessage[]> {
-    return Array.from(this.contactMessages.values());
+    return await db.select().from(contactMessages);
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

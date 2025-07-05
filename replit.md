@@ -17,9 +17,10 @@ LectureAI is a full-stack web application that transforms university lectures in
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js framework
 - **Language**: TypeScript with ES modules
-- **Database**: PostgreSQL with Drizzle ORM
+- **Database**: PostgreSQL with Drizzle ORM (DatabaseStorage implementation)
 - **Validation**: Zod schemas for request/response validation
 - **Session Management**: Connect-pg-simple for PostgreSQL session storage
+- **Database Connection**: Neon PostgreSQL serverless with WebSocket support
 
 ### Development Setup
 - **Monorepo Structure**: Client, server, and shared code in single repository
@@ -103,3 +104,4 @@ Preferred communication style: Simple, everyday language.
 
 Changelog:
 - July 05, 2025. Initial setup
+- January 05, 2025. Added PostgreSQL database with Drizzle ORM, replaced MemStorage with DatabaseStorage for persistent data storage
