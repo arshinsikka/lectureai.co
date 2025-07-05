@@ -137,9 +137,7 @@ export default function Legal() {
                   If you have any questions about these terms or our privacy practices, please contact us:
                 </p>
                 <div className="space-y-2 text-gray-700">
-                  <p><strong>Email:</strong> teamlectureai@gmail.com</p>
-                  <p><strong>Website:</strong> lectureai.com</p>
-                  <p><strong>Response time:</strong> We aim to respond within 48 hours</p>
+                  <p><strong>Email:</strong> teamlectureai@gmail.com | <strong>Website:</strong> lectureai.co</p>
                 </div>
               </div>
             </section>
