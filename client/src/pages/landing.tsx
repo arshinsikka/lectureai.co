@@ -66,7 +66,7 @@ export default function Landing() {
     <div className="min-h-screen bg-white">
       <Navigation onWaitlistClick={() => setIsWaitlistOpen(true)} />
       
-      <main className="pt-16">
+      <main className="pt-20">
         <HeroSection onWaitlistClick={() => setIsWaitlistOpen(true)} />
         <ProblemVisionSection />
         <FeaturesSection />
