@@ -16,7 +16,8 @@ export function TeamSection() {
       role: "Backend & Infrastructure Lead",
       description: "Experienced in building robust backend systems for high-volume processing, cloud storage, and DevOps.",
       image: ishanImage,
-      roleColor: "text-blue-800"
+      roleColor: "text-blue-800",
+      imagePosition: "object-top"
     },
     {
       name: "Arshin Sikka",
@@ -45,7 +46,7 @@ export function TeamSection() {
               <img 
                 src={member.image}
                 alt={`${member.name} - ${member.role}`}
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-lg group-hover:shadow-xl transition-shadow"
+                className={`w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-lg group-hover:shadow-xl transition-shadow ${member.imagePosition || 'object-center'}`}
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
               <p className={`${member.roleColor} font-medium mb-2`}>{member.role}</p>

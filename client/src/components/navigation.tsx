@@ -44,16 +44,10 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
                 Contact
               </button>
               <Link
-                href="/privacy"
+                href="/legal"
                 className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
               >
-                Privacy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
-              >
-                Terms
+                Legal
               </Link>
             </>
           ) : (
@@ -77,16 +71,10 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
                 Contact
               </Link>
               <Link
-                href="/privacy"
+                href="/legal"
                 className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
               >
-                Privacy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
-              >
-                Terms
+                Legal
               </Link>
             </>
           )}
@@ -125,18 +113,11 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
                   Contact
                 </button>
                 <Link
-                  href="/privacy"
+                  href="/legal"
                   className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Privacy
-                </Link>
-                <Link
-                  href="/terms"
-                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Terms
+                  Legal
                 </Link>
               </>
             ) : (
@@ -163,18 +144,11 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
                   Contact
                 </Link>
                 <Link
-                  href="/privacy"
+                  href="/legal"
                   className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Privacy
-                </Link>
-                <Link
-                  href="/terms"
-                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Terms
+                  Legal
                 </Link>
               </>
             )}
