@@ -36,9 +36,17 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
               <Button
                 variant="outline"
                 className="border-2 border-blue-800 text-blue-800 px-8 py-4 text-lg font-semibold hover:bg-blue-800 hover:text-white transition-all duration-200"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/files/lectureai-pitch-deck.pdf';
+                  link.download = 'LECTURE AI PITCH DECK.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
                 <Download className="mr-2 h-5 w-5" />
-                Download Intro Deck
+                📥 Download Pitch Deck
               </Button>
             </div>
             

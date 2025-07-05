@@ -3,8 +3,13 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertWaitlistEntrySchema, insertContactMessageSchema } from "@shared/schema";
 import { z } from "zod";
+import path from "path";
+import express from "express";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static files from client/public directory
+  const publicPath = path.resolve(import.meta.dirname, "..", "client", "public");
+  app.use(express.static(publicPath));
   // Waitlist endpoint
   app.post("/api/waitlist", async (req, res) => {
     try {
