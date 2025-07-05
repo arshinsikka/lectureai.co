@@ -1,50 +1,45 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Target, Zap, Shield } from "lucide-react";
 
 export function VisionSection() {
-  const visionPoints = [
+  const visionPillars = [
     {
       title: "Accessibility First",
-      description: "Making education accessible to students with diverse learning needs and language backgrounds."
+      icon: <Target className="h-5 w-5 text-orange-500" />
     },
     {
-      title: "Efficiency Focused",
-      description: "Reducing the time spent on note-taking so students can focus on understanding and application."
+      title: "Efficiency Focused", 
+      icon: <Zap className="h-5 w-5 text-orange-500" />
     },
     {
       title: "Quality Assured",
-      description: "Trusted by educators and validated by academic institutions for accuracy and reliability."
+      icon: <Shield className="h-5 w-5 text-orange-500" />
     }
   ];
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="University lecture hall filled with students actively taking notes during a lecture" 
-              className="rounded-2xl shadow-xl w-full h-auto"
-            />
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Our Vision for Education
-            </h2>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Our Vision for Smarter Learning
+          </h2>
+          
+          <div className="space-y-6 mb-8">
             <p className="text-lg text-gray-600 leading-relaxed">
-              We believe that learning should be accessible, efficient, and personalized. LectureAI is designed to bridge the gap between traditional lecture formats and modern learning needs.
+              At LectureAI, we envision a learning experience where students no longer rewatch, rewind, or take fragmented notes. Instead, they receive AI-powered, topic-based summaries with key takeaways, formulas, and deadlines — ready to review, translate, and act on.
             </p>
-            <div className="space-y-4">
-              {visionPoints.map((point, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-orange-500 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">{point.title}</h4>
-                    <p className="text-gray-600">{point.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              We aim to make academic content accessible, efficient, and structured — especially for students with diverse learning styles and language needs.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            {visionPillars.map((pillar, index) => (
+              <div key={index} className="flex items-center space-x-2 bg-gray-50 rounded-lg px-4 py-3">
+                {pillar.icon}
+                <span className="font-semibold text-gray-900">{pillar.title}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
