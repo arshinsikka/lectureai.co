@@ -63,9 +63,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
               />
             </div>
             
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500/10 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-800/10 rounded-full animate-pulse"></div>
+
             
             {/* Feature Cards */}
             <div className="absolute top-4 -left-8 bg-white rounded-lg shadow-lg p-4 hidden lg:block">
