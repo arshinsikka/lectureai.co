@@ -1,0 +1,53 @@
+Add a dedicated **“How It Works”** page to the LectureAI website.
+
+---
+
+🧭 Navigation Instructions:
+- Add a new link in the top navigation bar labeled **“How It Works”**.
+- This should be placed between **“Features”** and **“Team”** in the navbar.
+- When clicked, this should route to a **new section or route (e.g., /how-it-works)**.
+- Use smooth scroll or page navigation (React/Next.js route or static HTML anchor — based on setup).
+
+---
+
+🧠 Page Title:  
+**“How LectureAI Works”**  
+_(Optional subheading: “From lecture to polished notes in under 20 minutes”)_
+
+---
+
+🧩 Content Breakdown:
+Design this section as a **visually guided 6-step process**, with icons or illustrations.
+
+📘 **Step 1: Lecture Audio Recorded on Zoom**  
+> Lecturers host a Zoom session and record the audio (MP3/M4A).  
+
+⚙️ **Step 2: Auto-Retrieval via Zoom Webhook**  
+> LectureAI automatically fetches the audio via Zoom Cloud API — no manual upload needed.
+
+🧠 **Step 3: AI-Powered Transcription**  
+> We use Whisper or Google STT to transcribe speech into clear, structured text.
+
+📚 **Step 4: Topic Segmentation + Summarization**  
+> Our AI splits the lecture into topic-based sections and generates summaries, key points, and formulas.
+
+📆 **Step 5: Action Items + Mandarin Translation**  
+> LectureAI extracts assignments and announcements and translates key content to Mandarin.
+
+📄 **Step 6: Downloadable Document**  
+> A DOCX or PDF is generated — ready for revision, bilingual access, and upload to Canvas.
+
+---
+
+🎨 Design Instructions:
+- Use a horizontal timeline or vertical numbered step layout (desktop)  
+- Collapse into stacked layout for mobile  
+- Include icons or vector illustrations next to each step  
+- Add a “Try It Soon” button at the end linking to the waitlist (optional CTA)
+
+---
+
+🧩 Final Notes:
+- Ensure the new page does not affect the current landing layout.
+- Do NOT add random extra steps like live syncing, LMS automation, or quizzes — stick to the 6 steps above.
+- Ask me if you need icons or illustrations for each step.
