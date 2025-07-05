@@ -1,4 +1,4 @@
-import { CheckCircle, Clock, Rocket, Globe } from "lucide-react";
+import { CheckCircle, Clock, Rocket, Globe, ArrowRight, ArrowDown } from "lucide-react";
 
 export function MilestonesRoadmapSection() {
   const milestones = [
@@ -79,25 +79,85 @@ export function MilestonesRoadmapSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {milestones.map((milestone, index) => (
-            <div key={index} className={`${milestone.bgColor} ${milestone.borderColor} border-2 rounded-2xl p-6 transition-transform hover:scale-105`}>
-              <div className="flex items-center space-x-3 mb-4">
-                {milestone.icon}
-                <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
-                  {milestone.date}
-                </span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {milestone.title}
-              </h3>
-              
-              <p className="text-gray-600 leading-relaxed">
-                {milestone.description}
-              </p>
+        {/* Desktop Timeline Layout */}
+        <div className="hidden lg:block">
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-green-300 via-orange-300 to-blue-300 transform -translate-y-1/2"></div>
+            
+            <div className="grid grid-cols-7 gap-4">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="relative">
+                  {/* Timeline Dot */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                    <div className={`w-12 h-12 rounded-full ${milestone.bgColor} ${milestone.borderColor} border-4 flex items-center justify-center shadow-lg`}>
+                      {milestone.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className={`${index % 2 === 0 ? 'mt-20' : 'mb-20'} ${milestone.bgColor} ${milestone.borderColor} border-2 rounded-2xl p-6 transition-transform hover:scale-105`}>
+                    <div className="text-center">
+                      <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide block mb-2">
+                        {milestone.date}
+                      </span>
+                      
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">
+                        {milestone.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {milestone.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Mobile/Tablet Vertical Timeline */}
+        <div className="lg:hidden">
+          <div className="relative">
+            {/* Vertical Timeline Line */}
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-300 via-orange-300 to-blue-300"></div>
+            
+            <div className="space-y-8">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="relative flex items-start">
+                  {/* Timeline Dot */}
+                  <div className="relative z-10">
+                    <div className={`w-12 h-12 rounded-full ${milestone.bgColor} ${milestone.borderColor} border-4 flex items-center justify-center shadow-lg`}>
+                      {milestone.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Arrow Connector */}
+                  <div className="mx-4 mt-4">
+                    <ArrowRight className="h-5 w-5 text-gray-400" />
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className={`flex-1 ${milestone.bgColor} ${milestone.borderColor} border-2 rounded-2xl p-6 transition-transform hover:scale-105`}>
+                    <div className="flex items-center space-x-3 mb-4">
+                      <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
+                        {milestone.date}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {milestone.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 leading-relaxed">
+                      {milestone.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
