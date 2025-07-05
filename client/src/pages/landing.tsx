@@ -7,6 +7,7 @@ import { VisionSection } from "@/components/vision-section";
 import { TeamSection } from "@/components/team-section";
 import { MilestonesRoadmapSection } from "@/components/milestones-roadmap-section";
 import { ContactSection } from "@/components/contact-section";
+import { NewsletterSection } from "@/components/newsletter-section";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -103,6 +104,7 @@ export default function Landing() {
         </section>
         
         <ContactSection />
+        <NewsletterSection />
       </main>
       
       <Footer />
