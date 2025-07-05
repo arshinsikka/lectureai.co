@@ -71,7 +71,7 @@ export function ContactSection() {
             Get in Touch
           </h2>
           <p className="text-xl text-gray-600">
-            Interested in partnering with us or learning more about LectureAI?
+            Interested in partnering with us or learning more about Lecture AI?
           </p>
         </div>
         
@@ -87,7 +87,7 @@ export function ContactSection() {
               </div>
             </div>
             <div className="text-gray-600">
-              <p>We'd love to hear from you! Whether you're interested in partnerships, have questions about our technology, or want to learn more about LectureAI, don't hesitate to reach out.</p>
+              <p>We'd love to hear from you! Whether you're interested in partnerships, have questions about our technology, or want to learn more about Lecture AI, don't hesitate to reach out.</p>
             </div>
           </div>
           

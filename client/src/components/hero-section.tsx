@@ -21,7 +21,7 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 — Powered by AI
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                LectureAI converts university lectures into bilingual, revision-friendly summaries using AI — designed for students, trusted by educators.
+                Lecture AI converts university lectures into bilingual, revision-friendly summaries using AI — designed for students, trusted by educators.
               </p>
             </div>
             

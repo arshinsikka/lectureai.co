@@ -26,13 +26,13 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <img 
                 src={logoPath} 
-                alt="LectureAI Logo" 
+                alt="Lecture AI Logo" 
                 className="h-8 w-8 object-contain"
               />
-              <span className="text-lg font-bold">LectureAI</span>
+              <span className="text-lg font-bold">Lecture AI</span>
             </div>
             <p className="text-gray-400">
-              LectureAI is a student-led AI venture from NUS, built to turn university lectures into multilingual, revision-ready notes — proudly backed by BLOCK71 Singapore.
+              Lecture AI is a student-led AI venture from NUS, built to turn university lectures into multilingual, revision-ready notes — proudly backed by BLOCK71 Singapore.
             </p>
           </div>
           
@@ -78,7 +78,7 @@ export function Footer() {
         
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 LectureAI. All rights reserved.
+            © 2025 Lecture AI. All rights reserved.
           </p>
         </div>
       </div>

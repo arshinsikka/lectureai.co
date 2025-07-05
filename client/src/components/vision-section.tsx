@@ -26,7 +26,7 @@ export function VisionSection() {
           
           <div className="space-y-6 mb-8">
             <p className="text-lg text-gray-600 leading-relaxed">
-              At LectureAI, we envision a learning experience where students no longer rewatch, rewind, or take fragmented notes. Instead, they receive AI-powered, topic-based summaries with key takeaways, formulas, and deadlines — ready to review, translate, and act on.
+              At Lecture AI, we envision a learning experience where students no longer rewatch, rewind, or take fragmented notes. Instead, they receive AI-powered, topic-based summaries with key takeaways, formulas, and deadlines — ready to review, translate, and act on.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               We aim to make academic content accessible, efficient, and structured — especially for students with diverse learning styles and language needs.

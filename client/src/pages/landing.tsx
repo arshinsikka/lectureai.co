@@ -28,7 +28,7 @@ export default function Landing() {
     onSuccess: () => {
       toast({
         title: "Welcome to the waitlist! 🎉",
-        description: "We'll notify you as soon as LectureAI launches.",
+        description: "We'll notify you as soon as Lecture AI launches.",
       });
       setWaitlistData({ name: "", email: "" });
       setIsWaitlistOpen(false);
@@ -81,7 +81,7 @@ export default function Landing() {
               Ready to Transform Your Learning Experience?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Join thousands of students who are already revolutionizing their note-taking with LectureAI.
+              Join thousands of students who are already revolutionizing their note-taking with Lecture AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -117,7 +117,7 @@ export default function Landing() {
               Join the Waitlist
             </DialogTitle>
             <DialogDescription className="text-gray-600">
-              Be the first to experience LectureAI when we launch. We'll notify you as soon as it's ready!
+              Be the first to experience Lecture AI when we launch. We'll notify you as soon as it's ready!
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">

@@ -72,7 +72,7 @@ export function NewsletterSection() {
         </div>
         
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Stay Updated on LectureAI's Progress
+          Stay Updated on Lecture AI's Progress
         </h2>
         
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">

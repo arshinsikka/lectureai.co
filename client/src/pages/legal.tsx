@@ -73,7 +73,7 @@ export default function Legal() {
                 <div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">Acceptance of Terms</h3>
                   <p className="text-gray-700">
-                    By accessing and using LectureAI, you accept and agree to be bound by the terms 
+                    By accessing and using Lecture AI, you accept and agree to be bound by the terms 
                     and provisions of this agreement. If you do not agree to these terms, please do not use our service.
                   </p>
                 </div>
@@ -81,7 +81,7 @@ export default function Legal() {
                 <div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">Use License</h3>
                   <p className="text-gray-700">
-                    Permission is granted to use LectureAI for personal, educational, and non-commercial 
+                    Permission is granted to use Lecture AI for personal, educational, and non-commercial 
                     purposes. This is the grant of a license, not a transfer of title, and under this license you may not:
                   </p>
                   <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
@@ -113,7 +113,7 @@ export default function Legal() {
                 <div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">Limitation of Liability</h3>
                   <p className="text-gray-700">
-                    In no event shall LectureAI or its suppliers be liable for any damages arising out of 
+                    In no event shall Lecture AI or its suppliers be liable for any damages arising out of 
                     the use or inability to use the service, including but not limited to damages for loss 
                     of data or profit, or due to business interruption.
                   </p>

@@ -20,7 +20,7 @@ export default function HowItWorks() {
     onSuccess: () => {
       toast({
         title: "Welcome to the waitlist!",
-        description: "We'll notify you as soon as LectureAI launches.",
+        description: "We'll notify you as soon as Lecture AI launches.",
       });
       setWaitlistData({ name: "", email: "" });
       setIsWaitlistOpen(false);
@@ -65,7 +65,7 @@ export default function HowItWorks() {
     {
       number: 2,
       title: "Auto-Retrieval via Zoom Webhook",
-      description: "LectureAI automatically fetches the audio via Zoom Cloud API — no manual upload needed.",
+      description: "Lecture AI automatically fetches the audio via Zoom Cloud API — no manual upload needed.",
       icon: <Webhook className="h-8 w-8 text-white" />,
       bgColor: "bg-blue-800"
     },
@@ -86,7 +86,7 @@ export default function HowItWorks() {
     {
       number: 5,
       title: "Action Items + Mandarin Translation",
-      description: "LectureAI extracts assignments and announcements and translates key content to Mandarin.",
+      description: "Lecture AI extracts assignments and announcements and translates key content to Mandarin.",
       icon: <Calendar className="h-8 w-8 text-white" />,
       bgColor: "bg-orange-500"
     },
@@ -108,7 +108,7 @@ export default function HowItWorks() {
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How LectureAI Works
+              How Lecture AI Works
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               From lecture to polished notes in under 20 minutes
@@ -156,7 +156,7 @@ export default function HowItWorks() {
               Ready to Transform Your Learning Experience?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Join our waitlist to be the first to experience LectureAI's powerful note-taking capabilities.
+              Join our waitlist to be the first to experience Lecture AI's powerful note-taking capabilities.
             </p>
             <Button
               onClick={() => setIsWaitlistOpen(true)}
@@ -179,7 +179,7 @@ export default function HowItWorks() {
               Join the Waitlist
             </DialogTitle>
             <DialogDescription className="text-gray-600">
-              Be the first to experience LectureAI when we launch. We'll notify you as soon as it's ready!
+              Be the first to experience Lecture AI when we launch. We'll notify you as soon as it's ready!
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleWaitlistSubmit} className="space-y-4">
