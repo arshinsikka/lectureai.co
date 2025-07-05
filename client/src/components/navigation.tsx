@@ -31,62 +31,62 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
         <div className="hidden md:flex items-center space-x-8">
           {location === "/" ? (
             <>
-              <button
-                onClick={() => scrollToSection("features")}
-                className="text-gray-600 hover:text-orange-500 transition-colors"
-              >
-                Features
-              </button>
               <Link
                 href="/how-it-works"
-                className="text-gray-600 hover:text-orange-500 transition-colors"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
               >
                 How It Works
               </Link>
               <button
-                onClick={() => scrollToSection("team")}
-                className="text-gray-600 hover:text-orange-500 transition-colors"
-              >
-                Team
-              </button>
-              <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gray-600 hover:text-orange-500 transition-colors"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
               >
                 Contact
               </button>
+              <Link
+                href="/privacy"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
+              >
+                Privacy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
+              >
+                Terms
+              </Link>
             </>
           ) : (
             <>
               <Link
                 href="/"
-                className="text-gray-600 hover:text-orange-500 transition-colors"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
               >
                 Home
               </Link>
               <Link
-                href="/#features"
-                className="text-gray-600 hover:text-orange-500 transition-colors"
-              >
-                Features
-              </Link>
-              <Link
                 href="/how-it-works"
-                className="text-gray-600 hover:text-orange-500 transition-colors"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
               >
                 How It Works
               </Link>
               <Link
-                href="/#team"
-                className="text-gray-600 hover:text-orange-500 transition-colors"
-              >
-                Team
-              </Link>
-              <Link
                 href="/#contact"
-                className="text-gray-600 hover:text-orange-500 transition-colors"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
               >
                 Contact
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
+              >
+                Privacy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-gray-600 hover:text-orange-500 transition-colors hover:underline"
+              >
+                Terms
               </Link>
             </>
           )}
@@ -111,12 +111,6 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
           <div className="max-w-7xl mx-auto px-4 space-y-4">
             {location === "/" ? (
               <>
-                <button
-                  onClick={() => scrollToSection("features")}
-                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
-                >
-                  Features
-                </button>
                 <Link
                   href="/how-it-works"
                   className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
@@ -125,17 +119,25 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
                   How It Works
                 </Link>
                 <button
-                  onClick={() => scrollToSection("team")}
-                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
-                >
-                  Team
-                </button>
-                <button
                   onClick={() => scrollToSection("contact")}
                   className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Contact
                 </button>
+                <Link
+                  href="/privacy"
+                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Privacy
+                </Link>
+                <Link
+                  href="/terms"
+                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Terms
+                </Link>
               </>
             ) : (
               <>
@@ -147,13 +149,6 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
                   Home
                 </Link>
                 <Link
-                  href="/#features"
-                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Features
-                </Link>
-                <Link
                   href="/how-it-works"
                   className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
@@ -161,18 +156,25 @@ export function Navigation({ onWaitlistClick }: NavigationProps) {
                   How It Works
                 </Link>
                 <Link
-                  href="/#team"
-                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Team
-                </Link>
-                <Link
                   href="/#contact"
                   className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
+                </Link>
+                <Link
+                  href="/privacy"
+                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Privacy
+                </Link>
+                <Link
+                  href="/terms"
+                  className="block w-full text-left text-gray-600 hover:text-orange-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Terms
                 </Link>
               </>
             )}

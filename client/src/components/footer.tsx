@@ -12,16 +12,12 @@ export function Footer() {
     ],
     support: [
       { name: "Contact", href: "#contact" },
-      { name: "Privacy", href: "#" },
-      { name: "Terms", href: "#" }
+      { name: "Privacy", href: "/privacy" },
+      { name: "Terms", href: "/terms" }
     ]
   };
 
-  const socialLinks = [
-    { name: "Twitter", href: "#", icon: "🐦" },
-    { name: "LinkedIn", href: "#", icon: "💼" },
-    { name: "GitHub", href: "#", icon: "🐙" }
-  ];
+
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -37,7 +33,7 @@ export function Footer() {
               <span className="text-lg font-bold">LectureAI</span>
             </div>
             <p className="text-gray-400">
-              LectureAI is an AI-powered platform built by NUS students to make lecture revision smarter and faster — proudly backed by BLOCK71 Singapore.
+              LectureAI is a student-led AI venture from NUS, built to turn university lectures into multilingual, revision-ready notes — proudly backed by BLOCK71 Singapore.
             </p>
           </div>
           
@@ -85,18 +81,6 @@ export function Footer() {
           <p className="text-gray-400 text-sm">
             © 2025 LectureAI. All rights reserved.
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="text-gray-400 hover:text-white transition-colors"
-                title={link.name}
-              >
-                <span className="text-lg">{link.icon}</span>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
