@@ -9,7 +9,7 @@ const mailService = new MailService();
 mailService.setApiKey(process.env.SENDGRID_API_KEY);
 
 const TEAM_EMAIL = 'teamlectureai@gmail.com';
-const FROM_EMAIL = 'noreply@lectureai.co'; // Will use your domain once deployed
+const FROM_EMAIL = 'teamlectureai@gmail.com'; // Use verified SendGrid sender
 
 export async function sendWaitlistNotification(entry: WaitlistEntry): Promise<boolean> {
   try {
@@ -47,6 +47,7 @@ export async function sendWaitlistNotification(entry: WaitlistEntry): Promise<bo
     return true;
   } catch (error) {
     console.error('❌ Failed to send waitlist notification:', error);
+    console.error('SendGrid Error Details:', JSON.stringify(error, null, 2));
     return false;
   }
 }
@@ -94,6 +95,7 @@ export async function sendContactNotification(message: ContactMessage): Promise<
     return true;
   } catch (error) {
     console.error('❌ Failed to send contact notification:', error);
+    console.error('SendGrid Error Details:', JSON.stringify(error, null, 2));
     return false;
   }
 }
