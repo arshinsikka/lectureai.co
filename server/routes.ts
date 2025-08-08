@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertWaitlistEntrySchema, insertContactMessageSchema } from "@shared/schema";
+import { sendWaitlistNotification, sendContactNotification } from "./email";
 import { z } from "zod";
 import path from "path";
 import express from "express";
@@ -15,6 +16,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertWaitlistEntrySchema.parse(req.body);
       const entry = await storage.addToWaitlist(validatedData);
+      
+      // Send email notification asynchronously (don't wait for it)
+      sendWaitlistNotification(entry).catch(error => {
+        console.error("Failed to send waitlist notification:", error);
+      });
+      
       res.json({ success: true, entry });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -32,6 +39,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactMessageSchema.parse(req.body);
       const message = await storage.saveContactMessage(validatedData);
+      
+      // Send email notification asynchronously (don't wait for it)
+      sendContactNotification(message).catch(error => {
+        console.error("Failed to send contact notification:", error);
+      });
+      
       res.json({ success: true, message });
     } catch (error) {
       if (error instanceof z.ZodError) {
