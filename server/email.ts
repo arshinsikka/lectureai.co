@@ -1,17 +1,30 @@
 import { MailService } from '@sendgrid/mail';
 import type { WaitlistEntry, ContactMessage } from '@shared/schema';
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY environment variable must be set");
-}
+// Initialize SendGrid mail service only if API key is provided
+let mailService: MailService | null = null;
 
-const mailService = new MailService();
-mailService.setApiKey(process.env.SENDGRID_API_KEY);
+if (process.env.SENDGRID_API_KEY) {
+  if (!process.env.SENDGRID_API_KEY.startsWith('SG.')) {
+    console.warn('⚠️  SendGrid API key format is invalid. Email notifications will be disabled.');
+  } else {
+    mailService = new MailService();
+    mailService.setApiKey(process.env.SENDGRID_API_KEY);
+    console.log('✅ SendGrid email service initialized');
+  }
+} else {
+  console.warn('⚠️  SENDGRID_API_KEY not set. Email notifications will be disabled.');
+}
 
 const TEAM_EMAIL = 'teamlectureai@gmail.com';
 const FROM_EMAIL = 'teamlectureai@gmail.com'; // Use verified SendGrid sender
 
 export async function sendWaitlistNotification(entry: WaitlistEntry): Promise<boolean> {
+  if (!mailService) {
+    console.log(`📧 Waitlist notification skipped (email service not configured): ${entry.email}`);
+    return false;
+  }
+
   try {
     const emailContent = {
       to: TEAM_EMAIL,
@@ -53,6 +66,11 @@ export async function sendWaitlistNotification(entry: WaitlistEntry): Promise<bo
 }
 
 export async function sendContactNotification(message: ContactMessage): Promise<boolean> {
+  if (!mailService) {
+    console.log(`📧 Contact notification skipped (email service not configured): ${message.email}`);
+    return false;
+  }
+
   try {
     const emailContent = {
       to: TEAM_EMAIL,
