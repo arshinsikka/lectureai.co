@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Rocket, Mail } from "lucide-react";
+import { Rocket, Mail, Play } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -90,6 +90,16 @@ export default function Landing() {
               >
                 <Rocket className="mr-2 h-5 w-5" />
                 Join the Waitlist
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  window.open('https://www.dropbox.com/scl/fi/3drnzwbqw1go4hsb5yluq/MVP-video-latest.mp4?rlkey=h1wnumtczbgu1k1s870h8pu8m&st=jg34zkrt&dl=0', '_blank');
+                }}
+                className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-orange-500 transition-all duration-200"
+              >
+                <Play className="mr-2 h-5 w-5" />
+                🎬 Watch Demo
               </Button>
               <Button
                 variant="outline"

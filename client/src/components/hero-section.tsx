@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Rocket, Download, Users, GraduationCap } from "lucide-react";
+import { Rocket, Download, Play, Users, GraduationCap } from "lucide-react";
 import heroIllustration from "@/assets/hero-illustration.png";
 
 interface HeroSectionProps {
@@ -48,6 +48,16 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
               >
                 <Download className="mr-2 h-5 w-5" />
                 📥 Download Pitch Deck
+              </Button>
+              <Button
+                variant="outline"
+                className="border-2 border-green-600 text-green-600 px-8 py-4 text-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-200"
+                onClick={() => {
+                  window.open('https://www.dropbox.com/scl/fi/3drnzwbqw1go4hsb5yluq/MVP-video-latest.mp4?rlkey=h1wnumtczbgu1k1s870h8pu8m&st=jg34zkrt&dl=0', '_blank');
+                }}
+              >
+                <Play className="mr-2 h-5 w-5" />
+                🎬 Watch Demo
               </Button>
             </div>
             
