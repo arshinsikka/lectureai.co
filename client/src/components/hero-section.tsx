@@ -49,6 +49,10 @@ export function HeroSection({ onWaitlistClick }: HeroSectionProps) {
                 <Download className="mr-2 h-5 w-5" />
                 📥 Download Pitch Deck
               </Button>
+            </div>
+            
+            {/* Watch Demo Button - Centered below main buttons */}
+            <div className="flex justify-center">
               <Button
                 variant="outline"
                 className="border-2 border-green-600 text-green-600 px-8 py-4 text-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-200"
